@@ -14,6 +14,10 @@ public class Solution_886 {
 
         Graph[] graphs = buildeGraph(n,dislikes);
 
+        for (int i = 1; i <= n; i++) {
+            traverse(graphs,i);
+        }
+
         return isBi;
     }
 
