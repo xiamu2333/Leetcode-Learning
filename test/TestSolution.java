@@ -15,22 +15,7 @@ public class TestSolution {
         Matcher m = p.matcher(dislikeStr);
         LinkedList<Integer[]> integers = new LinkedList<>();
         while (m.find()){
-            String temp = m.group();
-            Integer[] tempgruop = new Integer[2];
-            tempgruop[0] = Integer.parseInt(temp.charAt(0)+"");
-            tempgruop[1] = Integer.parseInt(temp.charAt(2)+"");
-            integers.add(tempgruop);
+            System.out.println(m.group());
         }
-
-        int numDislike = integers.size();
-        int[][] dislikes = new int[numDislike][2];
-        for (int i = 0; i < numDislike; i++) {
-            dislikes[i] = Arrays.stream(integers.get(i)).mapToInt(Integer::valueOf).toArray();
-        }
-
-        Solution_886 solution = new Solution_886();
-        System.out.println(solution.possibleBipartition(n, dislikes));
-
-
     }
 }
